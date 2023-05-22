@@ -24,3 +24,16 @@ Some Examples
 "())(()))" => 4
 "))((" => 0
 '''
+
+def count_valid_parentheses(s):
+    stack = []
+    count = 0
+
+    for char in s:
+        if char == '(':
+            stack.append(char)
+        elif char == ')' and stack:
+            stack.pop()
+            count += 2
+
+    return count
