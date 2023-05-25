@@ -20,3 +20,6 @@ def alphabet_position(text):
         if i in alphabet:
             new_list.append(str(alphabet[i]))
     return ' '.join(new_list)
+
+# OR
+    # return ' '.join(str(ord(c) - 96) for c in text.lower() if c.isalpha())
