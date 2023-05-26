@@ -33,17 +33,21 @@ with relation to running multiple processes at the same time: https://en.wikiped
 '''
 
 def queue_time(customers, n):
-
     sum = 0
     for i in customers:
         sum += i
-
+        
     if sum != 0 and sum < n:
         sorted_list = sorted(customers)
         return sorted_list[-1]
     
     if len(customers) > 0:
-        return sum / n
+        tills = [0] * n
+        for customer in customers:
+            min_till = min(tills)
+            min_index = tills.index(min_till)
+            tills[min_index] += customer   
+        return max(tills)
     
     else:
         return 0
