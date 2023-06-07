@@ -12,9 +12,19 @@ In fact the word if and the character ? are not allowed in your code.
 '''
 
 def no_ifs_no_buts(a, b):
-    if a < b:
+    small = a < b
+    while small:
         return f"{a} is smaller than {b}"
-    if a > b:
+        
+    greater = a > b
+    while greater:
         return f"{a} is greater than {b}"
-    else:
+    
+    equal = a == b
+    while equal:
         return f"{a} is equal to {b}"
+    
+    # OR
+
+    # d = {a<b:'smaller than', a==b:'equal to', a>b: 'greater than'}
+    # return f'{a} is {d[True]} {b}'
