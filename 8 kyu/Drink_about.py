@@ -23,3 +23,9 @@ Examples: (Input --> Output)
 
 def people_with_age_drink(age):
     return ["drink toddy", "drink coke", "drink beer", "drink whisky"][(age >= 21) + (age > 17) + (age > 13)]
+
+a = 'abc'
+for i in  a:
+    b = i * (a.index(i)+1)
+    b[0].upper()
+    print
