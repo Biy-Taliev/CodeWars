@@ -16,3 +16,5 @@ def powers_of_two(n):
         power += 1
         lst.append(2 ** power)
     return lst
+
+# return [2**x for x in range(n+1)]
