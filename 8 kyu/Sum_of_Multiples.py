@@ -22,3 +22,9 @@ def sum_mul(n, m):
 
     s = n_i * (n + l_n) // 2
     return s
+
+
+    # if m>0 and n>0:
+    #     return sum(range(n, m, n))
+    # else:
+    #     return 'INVALID'
